@@ -1,0 +1,515 @@
+{{extend 'base_form.html'}}
+<form action="#" enctype="multipart/form-data" method="post">
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p>Queixa e Duração</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">
+					<div class="col-sm-4 col-md-4 col-lg-4 text-right">{{=form.custom.label['d_QD']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['d_QD']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">
+					<div class="col-sm-4 col-md-4 col-lg-4 text-right">{{=form.custom.label['e_QD']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['e_QD']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['tempo_meses_QD']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['tempo_meses_QD']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['nodulo_QD', 'dor_QD', 'fluxo_QD', 'inflamacao_QD', 'treuma_QD', 'assintomatica_QD']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['outros_QD']}}</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						{{=form.custom.widget['outros_QD']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Antecedentes Tocoginecológicos: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['menarca_AT', 'idade_primeiro_AT']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['menopausa_AT', 'aleitamente_numero_total_AT']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['hormonios_AT']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['hormonios_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['dum_AT']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['dum_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['aco_AT']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['aco_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-4 col-md-4 col-lg-4"> 
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget['aco_text_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					{{itens = ['g_AT', 'p_AT', 'a_AT']}}
+					{{for item in itens:}}
+					<div class="col-sm-1 col-md-1 col-lg-1">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-3 col-md-3 col-lg-3">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+					{{pass}}
+				</label>
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['trh_AT']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['trh_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-4 col-md-4 col-lg-4"> 
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget['trh_text_AT']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Antecedentes Pessoais e Familiares: </p>
+			</div>
+		</div>
+		{{itens = ['alcoolismo', 'tabagismo']}}
+		{{apf = '_APF'}}
+		{{text = '_text_APF'}}
+		{{for item in itens:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=item.capitalize()}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item+apf]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">Nº por Dia:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item+text]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['biopsia_previa_APF']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['biopsia_previa_APF']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['ap_APF']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['ap_APF']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['cancer_mama_APF']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['cancer_mama_APF']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['tratamento']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['tratamento']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> CA Mama: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['mae_CM', 'materno_CM', 'unilateral_CM', 'avo_CM', 'paterno_CM', 'bilateral_CM', 'tia_CM', 'irma_CM', 'prima_CM']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-xs-12 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		{{itens = ['idade_CM', 'observacoes_CM']}}
+		{{for item in itens:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+	</div>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Outros Câncer: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['endometrio_OC', 'colon_OC', 'ovario_OC', 'tireoide_OC', 'prostata_OC', 'outros_OC']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-xs-12 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget['outros_text_OC']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	</div>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Exame: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['exame_fisico_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['exame_fisico_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['inspecao_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['inspecao_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['abaulamento_E', 'retracao_E', 'uiceracao_E', 'eritema_E', 'edema_E', 'edema_braco_E']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-xs-12 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['palpacao_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['palpacao_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['consistencia_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['consistencia_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['mobilidade_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['mobilidade_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['superficie_E']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['superficie_E']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Experessão: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['fluxo_Ex']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['fluxo_Ex']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['cor_Ex']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['cor_Ex']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['multiductal_Ex', 'uniductal_Ex', 'linfonodos_axila_Ex', 'supre_clavicular_Ex', 'd_Ex', 'unico_Ex', 'moveis_Ex', 'isolado_Ex', 'e_Ex', 'multiplo_Ex', 'fixos_Ex', 'conglomerado_Ex']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-xs-12 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Suspeita Clínica: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['lesao_SC']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['lesao_SC']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{select = ['suspeita_clinica_SC', 'mamografia_SC', 'usg_SC', 'citologia_SC', 'paaf_SC', 'bag_SC']}}
+		{{for item in select:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-xs-12 col-md-4 col-xs-12 col-lg-4 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['biopsia_SC']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['biopsia_SC']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['ap_SC']}}:</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						{{=form.custom.widget['ap_SC']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="thumbnail">
+		{{itens = ['estadiamento_clinico', 'tnm', 'conduta']}}
+		{{for item in itens:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+		{{select = ['rx_torax', 'mapeamento_osseo', 'usg_abdominal', 'usg_pelvica']}}
+		{{text = '_text'}}
+		{{for item in select:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget[item+text]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+	</div>
+	<div class="row">
+    	<div class="form-group">
+       		<div class="col-sm-2 col-md-2 col-lg-2">
+           		<input class="btn btn-primary" type="submit" value="Gravar informações" />
+        	</div>
+   		</div>
+	</div>
+{{=form.hidden_fields()}}
+</form>

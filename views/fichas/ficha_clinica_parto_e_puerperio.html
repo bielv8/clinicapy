@@ -1,0 +1,492 @@
+<!--0.1-->
+{{extend 'base_form.html'}}
+<form action="#" enctype="multipart/form-data" method="post">
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Parto</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['data_P', 'local_P']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6 col-sm-offset-6 col-md-offset-6 col-lg-offset-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['nivel_atencao_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['nivel_atencao_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['idade_gestacional_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['idade_gestacional_P']}}
+						<span class="help-block">Semanas</span>
+					</div>
+				</label>
+				<label class="control-label col-sm-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['inicio_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['inicio_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['tipo_parto_P']}}:</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						{{=form.custom.widget['tipo_parto_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['episiotomia_P', 'laceracao_P', 'delivramento_espontaneo_P', 'curagem_P', 'mae_rh_P', 'imunoglobulina_P']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-xs-12 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['responsavel_parto_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['responsavel_parto_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['responsavel_outro_P']}}:</div> 
+					<div class="col-sm-4 col-md-4 col-lg-4">
+						{{=form.custom.widget['responsavel_outro_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['morte_fetal_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['morte_fetal_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['morte_feta_gestacao_P', 'morte_feta_parto_P', 'morte_feta_ignorado_P']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-3 col-md-2 col-xs-12 col-lg-2 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['morte_feta_causa_P']}}:</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						{{=form.custom.widget['morte_feta_causa_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		{{itens = ['medicaocoes_parto_P', 'intercorrencias_parto_P']}}
+		{{for item in itens:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label[item]}}</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget[item]}}
+					<span class="help-block"></span>
+				</div>
+			</div>
+		</div>
+		{{pass}}
+	</div>
+	<hr>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">
+				<p> Recém-Nascido</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['sexo_RN']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['sexo_RN']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['apgar_RN']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['apgar_RN']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6 col-xs-12">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['reanimacao_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['reanimacao_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['vdrl_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['vdrl_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['tipagem_sanguinea_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['tipagem_sanguinea_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['peso_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['peso_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['idade_exame_fisico_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['idade_exame_fisico_P']}}
+						<span class="help-block">Semanas</span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['peso_idade_gestacional_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget['peso_idade_gestacional_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		{{select = ['exame_fisico_P','exame_neurologico_P']}}
+		{{for item in select:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						 {{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		{{pass}}
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['estatura_P', 'perimetro_cefalico_P']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block">cm</span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['achados_anormais_P']}}:</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget['achados_anormais_P']}}
+					<span class="help-block"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['alojamento_conjunto_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['alojamento_conjunto_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">Patologias intercorrentes:</div> 
+			<div class="form-group">
+				{{itens = ['patologias_intercorrentes_memb_hialina_P', 'patologias_intercorrentes_hemorragia_P', 'patologias_intercorrentes_anomalia_congenita_P', 'patologias_intercorrentes_aspiracao_meconial_P', 'patologias_intercorrentes_hiperbilirrubinemia_P', 'patologias_intercorrentes_apneia_P', 'patologias_intercorrentes_outras_sindromes_P', 'patologias_intercorrentes_convuncao_P' ]}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['patologias_intercorrentes_outras_P']}}</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget['patologias_intercorrentes_outras_P']}}
+					<span class="help-block"></span>
+				</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-8 col-md-8 col-lg-8">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['alta_rn_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['alta_rn_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12">Óbito</div> 
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['idadei_alta_P']}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget['idadei_alta_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-5 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['transferencias_P']}}:</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						  {{=form.custom.widget['transferencias_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				<label class="control-label col-sm-3 col-md-4 col-lg-4">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget['transferencias_dias_P']}}
+						<span class="help-block">Dias</span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<div class="col-sm-4 col-md-4 col-lg-4">Idade óbito:</div> 
+				{{itens = ['idade_obito_dias_P', 'idade_obito_horas_P']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-12 col-md-12 col-lg-12">
+						{{=form.custom.widget[item]}}
+						<span class="help-block">{{=form.custom.label[item]}}
+</span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['causa_obito_P']}}:</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget['causa_obito_P']}}
+					<span class="help-block"></span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['sexo_P']}}:</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						  {{=form.custom.widget['sexo_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['alimentacao_P']}}:</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						 {{=form.custom.widget['alimentacao_P']}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="thumbnail">
+		<div class="row">
+			<div class="col-sm-8 col-md-8 col-lg-8">
+				<p> Consulta de Puerpério</p>
+			</div>
+			<label class="control-label col-sm-4 col-md-4 col-lg-4">
+				<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label['data_CP']}}</div> 
+				<div class="col-sm-8 col-md-8 col-lg-8">
+					{{=form.custom.widget['data_CP']}}
+					<span class="help-block"></span>
+				</div>
+			</label>
+		</div>
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['queixas_CP']}}:</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget['queixas_CP']}}
+					<span class="help-block"></span>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="form-group">
+				{{itens = ['pa_CP', 'estado_geral_CP', 'mucosa_CP']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-4 col-md-4 col-lg-4">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+		<hr>
+		{{itens = ['mamas_CP', 'abdome_CP', 'exame_ginecologico_CP']}}
+		{{for item in itens:}}
+		<div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-12 col-md-12 col-lg-12">
+					<div class="col-sm-2 col-md-2 col-lg-2">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-10 col-md-10 col-lg-10">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+			</div>
+		</div>
+		{{pass}}
+		<hr>
+	 	<div class="row">
+	 		<div class="col-sm-12 col-md-12 col-lg-12">Anticoncepção:</div>
+			<div class="form-group">
+				{{itens = ['aleitamento_materno_CP', 'barreira_CP', 'diu_CP', 'hormonal_oral_CP', 'hormonal_injetavel_CP', 'comportamental_CP', 'cirurgico_CP', 'nenhum_CP']}}
+				{{for item in itens:}}
+				<label class="control-label col-sm-6 col-md-6 col-lg-6">
+					<div class="col-sm-4 col-md-4 col-lg-4">{{=form.custom.label[item]}}</div> 
+					<div class="col-sm-8 col-md-8 col-lg-8">
+						{{=form.custom.widget[item]}}
+						<span class="help-block"></span>
+					</div>
+				</label>
+				{{pass}}
+			</div>
+		</div>
+        <hr>
+        <div class="row">
+			<div class="form-group">
+				<label class="control-label col-sm-2 col-md-2 col-lg-2">{{=form.custom.label['orientacao_CP']}}:</label>
+				<div class="col-sm-10 col-md-10 col-lg-10">
+					{{=form.custom.widget['orientacao_CP']}}
+					<span class="help-block"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+    	<div class="form-group">
+       		<div class="col-sm-2 col-md-2 col-lg-2">
+           		<input class="btn btn-primary" type="submit" value="Gravar informações" />
+        	</div>
+   		</div>
+	</div>
+{{=form.hidden_fields()}}
+</form>

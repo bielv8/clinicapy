@@ -1,0 +1,90 @@
+{{extend 'layout.html'}}
+<script src="{{=URL('static','js/raphael.js')}}"></script>
+<script src="{{=URL('static','js/morris.js')}}"></script>
+<div class="row">
+	<div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-default">
+			 <div class="panel-heading">
+			 	Total de Agendamentos e Consultas
+			 </div>
+			 <div class="panel-body">
+			 	<div id="graph-bar-tipo"></div>
+			 </div>
+		</div>
+	</div>
+	<div class="col-sm-6 col-md-6 col-lg-6">
+		<div class="panel panel-default">
+			 <div class="panel-heading">
+			 	Total de consultas/por tipo
+			 </div>
+			 <div class="panel-body">
+			 	<div id="graph-pizza-tipo"></div>
+			 </div>
+		</div>
+	</div>
+</div>
+<hr>
+<div class="row">
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+			<div class="panel panel-success">
+				<div class="panel-heading">
+					<div class="row">
+						<p class="text-center"><strong>Total de Pacientes cadastrados</strong></p>
+						<h2 class="text-center">{{=total_pacientes}}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+			<div class="panel panel-danger">
+				<div class="panel-heading">
+					<div class="row">
+						<p class="text-center"><strong>Total de Agendamentos</strong></p>
+						<h2 class="text-center">{{=total_agendamentos}}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4 col-md-4 col-lg-4">
+		<div class="col-sm-9 col-md-9 col-lg-9 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<div class="row">
+						<p class="text-center"><strong>Total de Consultas</strong></p>
+						<h2 class="text-center">{{=total_consultas}}</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<hr>
+<script>
+//graficos
+Morris.Bar({
+  element: 'graph-bar-tipo',
+
+  data: [
+    {x: '{{=data.strftime('%d/%m/%Y')}}', a:{{=qtd_agendamentos_dia}}, c:{{=qtd_consultas_dia}}},
+    {x: '{{=mes}}', a:{{=qtd_agendamentos_mes}}, c:{{=qtd_consultas_mes}}},
+  ],
+  xkey: 'x',
+  ykeys: ['a', 'c'],
+  labels: ['Agendamentos', 'Consultas'],
+  gridTextSize: 8,
+  resize: true
+});
+Morris.Donut({
+  element: 'graph-pizza-tipo',
+  data: [
+  	{{for dict in lista:}}
+    {label: '{{=dict['label']}}', value:{{=dict['qtd']}}},
+    {{pass}}
+  ],
+  resize: true
+});
+</script>

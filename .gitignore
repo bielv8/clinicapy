@@ -1,0 +1,12 @@
+*.pyc
+*.bak
+*.*~
+*.log
+*.swp
+*.table
+*.sqlite
+errors/*
+sessions/*
+cache/*
+uploads/*
+databases/*
