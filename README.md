@@ -106,7 +106,4 @@ Neste painel, você pode fazer a importação do web2clinic. Para isso, acesse o
 
 
 
-Para mais informações, entre em contato com os desenvolvedores:
 
-- Lucas Morais - lucasm310@gmail.com
-- Marcelo Theodoro - marcelotheodoro@outlook.com
